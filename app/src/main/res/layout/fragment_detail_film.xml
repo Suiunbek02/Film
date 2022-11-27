@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_film"
+    tools:context=".ui.fragments.detail.DetailFilmFragment">
+
+            <ImageView
+                android:id="@+id/item_detail_image"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_character_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="55dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                tools:text="NAME"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/item_detail_image"
+                app:layout_constraintTop_toTopOf="@id/item_detail_image" />
+
+            <TextView
+                android:id="@+id/item_detail_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_detail_image"
+                tools:ignore="MissingConstraints"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/item_character_species"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="25dp"
+                android:ellipsize="end"
+                android:lines="1"
+                tools:text="Human"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/item_detail_description"
+                app:layout_constraintStart_toStartOf="@id/item_detail_description"
+                app:layout_constraintTop_toBottomOf="@id/item_detail_description" />
+
+            <TextView
+                android:id="@+id/text_last_location"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="2002"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/item_detail_image"
+                app:layout_constraintTop_toBottomOf="@id/item_character_text" />
+
+            <TextView
+                android:id="@+id/item_last_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_character_species"
+                tools:text="location" />
+
+            <TextView
+                android:id="@+id/itemCharacterName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                tools:text="first_seen_in"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/item_last_location"
+                app:layout_constraintStart_toStartOf="@id/item_last_location"
+                app:layout_constraintTop_toBottomOf="@+id/item_last_location"
+                tools:ignore="MissingConstraints,UnknownId" />
+
+            <TextView
+                android:id="@+id/item_first_seen_in"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingBottom="5dp"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="@id/itemCharacterName"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/itemCharacterName"
+                tools:text="Character successes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
