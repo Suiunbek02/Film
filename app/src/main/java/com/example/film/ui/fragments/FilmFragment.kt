@@ -13,7 +13,7 @@ import com.example.film.ui.adapter.FilmAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
- class FilmFragment :
+class FilmFragment :
     BaseFragment<FragmentFilmBinding, FilmViewModel>(R.layout.fragment_film), FilmAdapter.OnClick {
 
     override val binding by viewBinding(FragmentFilmBinding::bind)
@@ -45,7 +45,7 @@ import dagger.hilt.android.AndroidEntryPoint
                 Log.e("no connect", message)
             },
             onSuccess = {
-                filmAdapter.submitList(it)
+                filmAdapter.submitList(it.body())
                 Log.e("yes connect", it.toString())
             }
         )
@@ -53,8 +53,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
     override fun onClick(id: String) {
         findNavController().navigate(
-            FilmFragmentDirections.
-            actionFilmFragmentToDetailFilmFragment(id)
+            FilmFragmentDirections.actionFilmFragmentToDetailFilmFragment(id)
         )
     }
 }

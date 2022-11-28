@@ -2,7 +2,6 @@ package com.example.film.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
@@ -10,13 +9,12 @@ import com.example.film.base.BaseDiffUtilItemCallback
 import com.example.film.databinding.ItemFilmBinding
 import com.example.film.models.model.FilmModel
 
-class FilmAdapter( private val onClick: OnClick) :
+class FilmAdapter(private val onClick: OnClick) :
     ListAdapter<FilmModel, FilmAdapter.ViewHolder>(BaseDiffUtilItemCallback()) {
-
 
     class ViewHolder(private val binding: ItemFilmBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: FilmModel?,onClick: OnClick) {
+        fun onBind(item: FilmModel?, onClick: OnClick) {
             binding.itemFilmText.text = item?.title
             binding.itemDisStatus.text = item?.description
             binding.itemCharacterStatus.text = item?.release_date

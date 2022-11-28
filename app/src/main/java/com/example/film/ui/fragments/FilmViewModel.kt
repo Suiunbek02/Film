@@ -11,5 +11,4 @@ class FilmViewModel @Inject constructor(
 ) : BaseViewModel() {
 
     fun fetchFilms() = repository.fetchFilms()
-
 }

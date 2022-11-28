@@ -31,5 +31,4 @@ class RetrofitClient {
     fun providerFilmApiService(): FilmApiService {
         return retrofit.create(FilmApiService::class.java)
     }
-
 }

@@ -15,5 +15,4 @@ interface FilmApiService {
     suspend fun fetchDetailFilm(
         @Path("id") id: String
     ): FilmModel
-
 }

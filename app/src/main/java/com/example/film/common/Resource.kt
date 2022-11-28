@@ -1,6 +1,6 @@
 package com.example.film.common
 
-sealed class Resource <out T>(
+sealed class Resource<out T>(
     val data: T? = null,
     val message: String? = null,
 ) {

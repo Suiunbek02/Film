@@ -12,12 +12,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    @Singleton
-    @Provides
-    fun provideRetrofitClient() = RetrofitClient()
+
+@Singleton
+private val retrofitClient = RetrofitClient( )
 
     @Singleton
     @Provides
-    fun provideFilmApiService(retrofitClient: RetrofitClient) =
-        retrofitClient.providerFilmApiService()
+    fun provideRetrofitClient() = retrofitClient.providerFilmApiService()
+
+
 }

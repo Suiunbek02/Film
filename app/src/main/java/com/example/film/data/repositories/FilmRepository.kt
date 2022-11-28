@@ -1,9 +1,7 @@
 package com.example.film.data.repositories
 
 import com.example.film.base.BaseRepository
-import com.example.film.common.Resource
 import com.example.film.data.remote.apiservices.FilmApiService
-import com.example.film.models.model.FilmModel
 import javax.inject.Inject
 
 class FilmRepository @Inject constructor(
@@ -15,6 +13,6 @@ class FilmRepository @Inject constructor(
     }
 
     fun fetchDetailFragment(id: String) = doRequest {
-        service.fetchDetailFilm(id = )
+        service.fetchDetailFilm(id)
     }
 }

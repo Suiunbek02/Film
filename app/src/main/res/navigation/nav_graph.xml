@@ -23,9 +23,6 @@
         android:name="id"
         app:argType="string"
         android:defaultValue="" />
-<!--        <argument-->
-<!--            android:name="get"-->
-<!--            app:argType="string" />-->
-    </fragment>
 
+    </fragment>
 </navigation>

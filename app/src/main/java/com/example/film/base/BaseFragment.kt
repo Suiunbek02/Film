@@ -8,8 +8,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.viewbinding.ViewBinding
 import com.example.film.common.Resource
-import com.example.film.models.model.FilmModel
-import com.example.film.ui.adapter.FilmAdapter
 
 abstract class BaseFragment<VB : ViewBinding, VM : ViewModel>(@LayoutRes layoutId: Int) :
     Fragment(layoutId) {
@@ -36,11 +34,10 @@ abstract class BaseFragment<VB : ViewBinding, VM : ViewModel>(@LayoutRes layoutI
     protected open fun setupSubscribes() {
     }
 
-
-    protected open fun<T> LiveData<Resource<T>>.subscribe(
-    state: ((state: Resource<T>) -> Unit)? = null,
-    onError: (error: String) -> Unit,
-    onSuccess: (data: T) -> Unit
+    protected open fun <T> LiveData<Resource<T>>.subscribe(
+        state: ((state: Resource<T>) -> Unit)? = null,
+        onError: (error: String) -> Unit,
+        onSuccess: (data: T) -> Unit
     ) {
         observe(viewLifecycleOwner) {
             state?.invoke(it)
